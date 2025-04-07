@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddEditTaskActivity">
+
+    <EditText
+        android:id="@+id/enter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter title"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+        android:id="@+id/enter_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter location"
+        app:layout_constraintTop_toBottomOf="@+id/enter_title"/>
+    <Spinner
+        android:id="@+id/priority_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_title"/>
+    <TextView
+        android:id="@+id/text_view_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deadline: "
+        app:layout_constraintBottom_toTopOf="@+id/task_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_location" />
+    <EditText
+        android:id="@+id/enter_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter year"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf ="@+id/text_view_deadline"
+        app:layout_constraintTop_toBottomOf="@+id/enter_location" />
+    <EditText
+        android:id="@+id/enter_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter month"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf="@+id/enter_year"
+        app:layout_constraintTop_toBottomOf="@+id/enter_location" />
+    <EditText
+        android:id="@+id/enter_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter day"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf="@+id/enter_month"
+        app:layout_constraintTop_toBottomOf="@+id/enter_location"/>
+
+    <Spinner
+        android:id="@+id/task_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_day" />
+
+    <TextView
+        android:id="@+id/text_view_status"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="status"
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/task_spinner"/>
+
+    <NumberPicker
+        android:id="@+id/status_picker"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_status"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/text_view_file"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text=""
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/status_picker"/>
+
+    <Button
+        android:id="@+id/button_attach_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attach File"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="367dp"
+        app:layout_constraintRight_toLeftOf="@+id/button_attach_sketch"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_file"/>
+
+    <Button
+        android:id="@+id/button_attach_sketch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attach Sketch"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="367dp"
+        app:layout_constraintLeft_toRightOf="@+id/button_attach_file"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_file"/>
+    />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

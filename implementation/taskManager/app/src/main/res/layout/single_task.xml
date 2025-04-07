@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO hints need to be removed when all tasks in available-->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginTop="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="27dp"
+    android:id="@+id/card"
+    app:cardCornerRadius="18dp">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="9dp"
+        android:id="@+id/single_task"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/text_view_task_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Type"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="30dp"></TextView>
+
+        <TextView
+            android:id="@+id/text_view_status_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_view_title"
+            android:textSize="24dp"
+            android:text="Status:">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_title"
+            android:layout_marginStart="35dp"
+            android:layout_toEndOf="@+id/text_view_status_text"
+            android:text="Status"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:id="@+id/text_view_deadline_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_view_status"
+            android:textSize="24dp"
+            android:text="Deadline:">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_status"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/text_view_deadline_text"
+            android:text="Deadline"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:id="@+id/text_view_location_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_view_deadline"
+            android:textSize="24dp"
+            android:text="Location:">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_location"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_view_deadline"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/text_view_deadline_text"
+            android:textSize="24dp"
+            android:text="Location">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_priority_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_view_location"
+            android:textSize="24dp"
+            android:text="Priority: ">
+        </TextView>
+
+         <TextView
+            android:id="@+id/text_view_priority"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_view_location"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/text_view_deadline_text"
+            android:textSize="24dp"
+            android:text="Priority">
+        </TextView>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
